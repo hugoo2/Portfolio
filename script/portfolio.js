@@ -3,7 +3,4 @@ $(document).ready(function(){
         $(".card").children().toggle();
     });
 
-    $(".project").click(function(){
-        $(".project").css("background-color","blue")
-    });
 });
