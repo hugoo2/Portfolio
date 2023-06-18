@@ -15,6 +15,7 @@ nav {
     align-items: center;
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 
 nav .profil {
@@ -73,6 +74,10 @@ nav a {
 
 .page-content header p{
     line-height: 30px;
+    color: #676767;
+}
+.page-content header p a{
+    text-decoration: none;
     color: #676767;
 }
 
@@ -148,6 +153,7 @@ hr{
 .projets-section{
     background-color: #141414;
     display: flex;
+    flex-wrap: wrap;
     margin-top: 50px;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -166,6 +172,7 @@ hr{
     padding-right: 2%;
     margin-left: 6%;
     margin-right: 6%;
+    margin-bottom: 8%;
     border: 1px solid black;
     color: rgb(138, 138, 138);
     transition: transform 0.2s;
@@ -177,6 +184,39 @@ hr{
 }
 
 
+.competences-section{
+    background-color: #141414;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+.competence{
+    height: 320px;
+    width: 200px;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-bottom: 6%;
+    border: 1px solid black;
+    color: rgb(138, 138, 138);
+    transition: transform 0.2s;
+}
+
+.competence:hover{
+    border: 1px solid #ccc;
+    transform: scale(1.5);
+}
 
 
 footer{
@@ -189,6 +229,7 @@ footer{
 }
 footer .infos a{
     text-decoration: none;
+    color:white;
 }
 
 footer .infos p{
