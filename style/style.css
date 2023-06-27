@@ -41,14 +41,26 @@ nav ul{
     list-style-type: none;
 }
 
-nav ul li{
+nav ul li {
+    position: relative;
     margin-left: 25px;
     cursor: pointer;
-    border-bottom: 1px solid #ccc;
 }
 
-nav ul li:hover{
-    border-bottom-color: #141414;
+nav ul li::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #ccc;
+    transition: width 0.2s ease-in-out;
+}
+
+nav ul li:hover::before {
+    width: 100%;
+    background-color: #141414;
 }
 
 nav a {
@@ -154,9 +166,9 @@ hr{
     background-color: #141414;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     margin-top: 50px;
     padding-top: 100px;
-    padding-bottom: 100px;
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
@@ -166,7 +178,7 @@ hr{
 
 .project{
     height: 250px;
-    width: 200px;
+    width: 190px;
     padding-top: 2%;
     padding-left: 2%;
     padding-right: 2%;
@@ -181,6 +193,11 @@ hr{
 .project:hover{
     border: 1px solid #ccc;
     transform: scale(1.5);
+}
+
+.project:last-child:hover{
+    background-image: url('../images/qrcode.png') !important;
+    background-repeat: round;
 }
 
 
@@ -240,4 +257,8 @@ footer .infos p{
 footer .infos p:hover{
     cursor: pointer;
     color: white;
+}
+
+#phrase-nativ:hover{
+    color: #141414;
 }
